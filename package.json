@@ -6,12 +6,19 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "start-ios": "react-native run-ios --simulator='iPhone 11'",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
+    "axios": "^0.24.0",
     "react": "17.0.2",
-    "react-native": "0.66.3"
+    "react-native": "0.66.3",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -25,5 +32,8 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
