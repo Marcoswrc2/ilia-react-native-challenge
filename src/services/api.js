@@ -12,6 +12,9 @@ const API_KEY = '66a66d6e649ca1e4a60f2227da49911e';
 //TRENDING MOVIES
 const TRENDING_URL = `${API_URL}trending/movies/week?api_key=${API_KEY}`;
 
+//NOW PLAYING MOVIES
+const PLAYING_URL = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=pt-BR`;
+
 //MOVIES GENRES
 const GENRES_URL = `${API_URL}genre/movie/list?api_key=${API_KEY}&language=pt-BR`;
 
@@ -42,4 +45,5 @@ export {
   TRENDING_URL,
   GENRES_URL,
   api,
+  PLAYING_URL,
 };

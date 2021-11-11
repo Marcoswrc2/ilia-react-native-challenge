@@ -20,7 +20,9 @@ const App = props => {
       <Stack.Screen
         name={RouteNames.DETAILS_SCREEN}
         component={DetailsScreen}
-        options={{title: 'Detalhes'}}
+        options={({navigation, route}) => ({
+          title: route.params.itemData.title,
+        })}
       />
     </Stack.Navigator>
   );
