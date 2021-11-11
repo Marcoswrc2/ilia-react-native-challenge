@@ -29,7 +29,9 @@ const POPULAR_BASE_URL = `${API_URL}discover/movie?api_key=${API_KEY}&language=e
 const FILTER_BASE_URL = `${API_URL}movie/popular?api_key=${API_KEY}&page=2`;
 
 // THE BASE URL WHICH TRIGGERS IMAGES
-const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
+
+// THE BASE URL WHICH TRIGGERS IMAGES
 
 // THE SIZE OF MOVIES POSTER IMAGES
 const IMAGE_SIZE = 'original';

@@ -11,7 +11,7 @@ const Card = ({title, posterPath, onPress}) => {
       <ContentImage>
         <Image
           source={{
-            uri: 'https://upload.wikimedia.org/wikipedia/pt/f/f5/Marvels_avengers_capa.jpg',
+            uri: `${IMAGE_BASE_URL}${IMAGE_SIZE}${posterPath}`,
           }}
           style={{flex: 1, resizeMode: 'contain'}}
         />
