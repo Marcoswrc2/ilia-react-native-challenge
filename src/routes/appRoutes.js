@@ -15,7 +15,7 @@ const App = props => {
       <Stack.Screen
         name={RouteNames.HOMESCREEN}
         component={HomeScreen}
-        options={{title: 'Início'}}
+        options={{title: 'Movies'}}
       />
       <Stack.Screen
         name={RouteNames.DETAILS_SCREEN}

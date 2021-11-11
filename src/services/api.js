@@ -13,7 +13,7 @@ const API_KEY = '66a66d6e649ca1e4a60f2227da49911e';
 const TRENDING_URL = `${API_URL}trending/movies/week?api_key=${API_KEY}`;
 
 //NOW PLAYING MOVIES
-const PLAYING_URL = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=pt-BR`;
+const PLAYING_URL = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=pt-BR&append_to_response=videos`;
 
 //MOVIES GENRES
 const GENRES_URL = `${API_URL}genre/movie/list?api_key=${API_KEY}&language=pt-BR`;
@@ -34,7 +34,7 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 // THE BASE URL WHICH TRIGGERS IMAGES
 
 // THE SIZE OF MOVIES POSTER IMAGES
-const IMAGE_SIZE = 'original';
+const IMAGE_SIZE = 'w500';
 
 export {
   SEARCH_BASE_URL,
