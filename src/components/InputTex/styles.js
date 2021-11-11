@@ -16,6 +16,8 @@ export const ContainerInput = styled.View`
   padding-horizontal: 10px;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  margin-vertical: 15px;
 `;
 export const Label = styled.Text`
   color: ${colors.secondaryColor};

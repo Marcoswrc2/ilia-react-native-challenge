@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View, TextInput, TouchableOpacity, Text} from 'react-native';
 // import {AntDesign} from '@expo/vector-icons';
 import {BoxIcon, ContainerInput} from './styles';
-import {set} from 'react-native-reanimated';
 
 const InputText = ({
   placeHolder = 'Pesquisar',
@@ -11,8 +10,6 @@ const InputText = ({
   handleClick,
   fakeInput = false,
 }) => {
-  //   const [value, onChangeText] = useState("");
-
   return (
     <ContainerInput>
       {fakeInput ? (
@@ -51,11 +48,6 @@ const InputText = ({
             editable
             maxLength={100}
           />
-          {/* <TouchableOpacity onPress={handleClick}>
-            <BoxIcon>
-              <AntDesign name="search1" size={20} color={'white'} />
-            </BoxIcon>
-          </TouchableOpacity> */}
         </>
       )}
     </ContainerInput>

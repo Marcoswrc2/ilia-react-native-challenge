@@ -19,8 +19,6 @@ export const ContentImage = styled.View`
   height: 170px;
   border-radius: 5px;
   overflow: hidden;
-  border-width: 1px;
-  border-color: white;
 `;
 export const BoxTitle = styled.View`
   border-radius: 5px;

@@ -17,24 +17,10 @@ const MoviesContext = createContext();
 
 export const MoviesProvider = ({children}) => {
   const [loadingM, setLoadingM] = useState(false);
+  const [loadingSearch, setLoadingSearch] = useState(false);
   const [loadingNP, setloadingNP] = useState(false);
   const [movies, setMovies] = useState(false);
-  const [moviesNP, setMoviesNP] = useState(false);
-
-  async function getLatestMovies() {
-    setLoadingM(true);
-    try {
-      let response = await api.get(TRENDING_URL);
-      if (response.data) {
-        const result = response.data.results;
-        setMovies(result);
-      }
-    } catch (error) {
-      console.error(err);
-    } finally {
-      setLoadingM(false);
-    }
-  }
+  const [searchedMovies, setSearchedMovies] = useState([]);
 
   async function getNowPlayingMovies(currentPage = 1) {
     setloadingNP(true);
@@ -50,15 +36,34 @@ export const MoviesProvider = ({children}) => {
       setLoadingM(false);
     }
   }
+  async function getSearchedMovies(value, currentPage = 1) {
+    setLoadingSearch(true);
+    const query = value;
+    try {
+      let response = await api.get(
+        `${SEARCH_BASE_URL}${query}&page=${currentPage}`,
+      );
+      if (response.data) {
+        const result = response.data.results;
+        setSearchedMovies([...result]);
+      }
+    } catch (error) {
+      console.error(err);
+    } finally {
+      setLoadingSearch(false);
+    }
+  }
 
   return (
     <MoviesContext.Provider
       value={{
         loadingM,
-        getLatestMovies,
         getNowPlayingMovies,
         movies,
         loadingNP,
+        getSearchedMovies,
+        searchedMovies,
+        loadingSearch,
       }}>
       {children}
     </MoviesContext.Provider>
