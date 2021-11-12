@@ -61,7 +61,7 @@ function DetailsScreen({navigation, route}) {
   };
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#333333'}}>
+    <View style={{flex: 1, backgroundColor: '#333333'}}>
       <ScrollView
         contentContainerStyle={{flexGrow: 1}}
         style={{paddingBottom: 20}}>
@@ -106,7 +106,7 @@ function DetailsScreen({navigation, route}) {
           </View>
         )}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 

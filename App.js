@@ -12,30 +12,20 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AppRoutes from './src/routes/appRoutes';
 import Providers from './src/contexts';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaProvider>
       <NavigationContainer>
+        <StatusBar barStyle={'light-content'} />
         <Providers>
           <AppRoutes />
         </Providers>
       </NavigationContainer>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 

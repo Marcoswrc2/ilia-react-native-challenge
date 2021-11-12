@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  ActivityIndicator,
-} from 'react-native';
+import {View, FlatList, ActivityIndicator} from 'react-native';
 import {useMovies} from '../../contexts/movies';
 import {RouteNames} from '../../routes/types';
 import Card from '../../components/Card';
+import {BoxFooter} from './styles';
 import InputText from '../../components/InputTex';
 
 function HomeScreen({navigation, route}) {
@@ -52,14 +47,9 @@ function HomeScreen({navigation, route}) {
 
   const renderFooter = () => {
     return (
-      <View
-        style={{
-          width: '100%',
-          height: 60,
-          justifyContent: 'center',
-        }}>
+      <BoxFooter>
         {loadingNP ? <ActivityIndicator color={'red'} size={'large'} /> : null}
-      </View>
+      </BoxFooter>
     );
   };
 
