@@ -13,7 +13,7 @@ const Card = ({title, posterPath, onPress}) => {
           source={{
             uri: `${IMAGE_BASE_URL}${IMAGE_SIZE}${posterPath}`,
           }}
-          style={{flex: 1, resizeMode: 'contain'}}
+          style={{flex: 1, resizeMode: 'cover'}}
         />
       </ContentImage>
       <BoxTitle>
