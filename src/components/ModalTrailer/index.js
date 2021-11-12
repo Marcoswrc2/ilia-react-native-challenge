@@ -5,7 +5,10 @@ import Modal from 'react-native-modal';
 
 const ModalTrailer = ({isOpen, setIsOpen, videoId}) => {
   return (
-    <Modal style={{margin: 10}} isVisible={isOpen}>
+    <Modal
+      style={{margin: 10}}
+      isVisible={isOpen}
+      onBackdropPress={() => setIsOpen(false)}>
       <View
         style={{
           height: 400,

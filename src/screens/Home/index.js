@@ -70,39 +70,23 @@ function HomeScreen({navigation, route}) {
   return (
     <View style={{flex: 1, backgroundColor: 'black', paddingVertical: 15}}>
       {/* <InputText value={searchValue} setValue={setSearchValue} /> */}
-      {false ? (
-        <FlatList
-          style={{flex: 1}}
-          columnWrapperStyle={{
-            flexGrow: 1,
-            justifyContent: 'space-around',
-            paddingHorizontal: 10,
-          }}
-          data={searchedMovies}
-          numColumns={2}
-          onEndReachedThreshold={0.3}
-          onEndReached={updatePageSec}
-          keyExtractor={(item, index) => item.id}
-          ListFooterComponent={renderFooter}
-          renderItem={renderItem}
-        />
-      ) : (
-        <FlatList
-          style={{flex: 1}}
-          columnWrapperStyle={{
-            flexGrow: 1,
-            justifyContent: 'space-around',
-            paddingHorizontal: 10,
-          }}
-          data={movies}
-          numColumns={2}
-          onEndReachedThreshold={0.3}
-          onEndReached={updatePage}
-          keyExtractor={(item, index) => item.id}
-          ListFooterComponent={renderFooter}
-          renderItem={renderItem}
-        />
-      )}
+      <FlatList
+        style={{
+          flex: 1,
+        }}
+        columnWrapperStyle={{
+          flexGrow: 1,
+          justifyContent: 'space-around',
+          paddingHorizontal: 10,
+        }}
+        data={movies}
+        numColumns={2}
+        onEndReachedThreshold={0.3}
+        onEndReached={updatePage}
+        keyExtractor={(item, index) => item.id}
+        ListFooterComponent={renderFooter}
+        renderItem={renderItem}
+      />
     </View>
   );
 }

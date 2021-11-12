@@ -17,7 +17,7 @@ const Card = ({title, posterPath, onPress}) => {
         />
       </ContentImage>
       <BoxTitle>
-        <Title numberOfLines={1} maxLength={5}>
+        <Title numberOfLines={2} maxLength={5}>
           {title}
         </Title>
       </BoxTitle>

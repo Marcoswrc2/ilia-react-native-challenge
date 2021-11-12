@@ -14,7 +14,7 @@ import Modal from 'react-native-modal';
 import {useMovies} from '../../contexts/movies';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ModalTrailer from '../../components/ModalTrailer';
-import {TextSinopse, TextTitle} from './styles';
+import {TextSinopse, TextTitle, CustomChip} from './styles';
 
 function DetailsScreen({navigation, route}) {
   const {itemData} = route.params;
@@ -30,19 +30,11 @@ function DetailsScreen({navigation, route}) {
 
   const renderItem = ({item, index}) => {
     return (
-      <View
-        style={{
-          padding: 8,
-          justifyContent: 'center',
-          alignItems: 'center',
-          borderRadius: 18,
-          backgroundColor: '#485778',
-          marginHorizontal: 5,
-        }}>
+      <CustomChip>
         <Text style={{color: 'white', fontSize: 14, fontWeight: 'bold'}}>
           {item.name}
         </Text>
-      </View>
+      </CustomChip>
     );
   };
 
@@ -65,6 +57,24 @@ function DetailsScreen({navigation, route}) {
       <ScrollView
         contentContainerStyle={{flexGrow: 1}}
         style={{paddingBottom: 20}}>
+        <TouchableOpacity
+          onPress={() => setOpen(true)}
+          style={{
+            padding: 8,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 4,
+            backgroundColor: '#D90912',
+            marginHorizontal: 5,
+            position: 'absolute',
+            zIndex: 2,
+            top: 10,
+            right: 5,
+          }}>
+          <Text style={{color: 'white', fontSize: 14, fontWeight: 'bold'}}>
+            Ver trailer
+          </Text>
+        </TouchableOpacity>
         {loadingDetails ? (
           <View
             style={{

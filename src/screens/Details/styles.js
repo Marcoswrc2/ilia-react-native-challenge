@@ -14,3 +14,11 @@ export const TextSinopse = styled.Text`
   line-height: 20px;
   text-align: justify;
 `;
+export const CustomChip = styled.View`
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  background-color: #d90912;
+  margin-horizontal: 5px;
+`;
