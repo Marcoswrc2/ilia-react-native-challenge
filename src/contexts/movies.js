@@ -19,7 +19,9 @@ export const MoviesProvider = ({children}) => {
   const [loadingM, setLoadingM] = useState(false);
   const [loadingSearch, setLoadingSearch] = useState(false);
   const [loadingNP, setloadingNP] = useState(false);
+  const [loadingDetails, setLoadingDetails] = useState(false);
   const [movies, setMovies] = useState(false);
+  const [movieDetails, setMovieDetails] = useState(false);
   const [searchedMovies, setSearchedMovies] = useState([]);
 
   async function getNowPlayingMovies(currentPage = 1) {
@@ -54,6 +56,22 @@ export const MoviesProvider = ({children}) => {
     }
   }
 
+  async function getMovieDetails(movieId) {
+    setLoadingDetails(true);
+    const url = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=pt-BR&append_to_response=videos`;
+    try {
+      let response = await api.get(url);
+      if (response.data) {
+        const result = response.data;
+        setMovieDetails(result);
+      }
+    } catch (error) {
+      console.error(err);
+    } finally {
+      setLoadingDetails(false);
+    }
+  }
+
   return (
     <MoviesContext.Provider
       value={{
@@ -64,6 +82,9 @@ export const MoviesProvider = ({children}) => {
         getSearchedMovies,
         searchedMovies,
         loadingSearch,
+        getMovieDetails,
+        loadingDetails,
+        movieDetails,
       }}>
       {children}
     </MoviesContext.Provider>

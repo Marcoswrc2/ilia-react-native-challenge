@@ -34,14 +34,6 @@ function HomeScreen({navigation, route}) {
     }
   }, [pageSec]);
 
-  // useEffect(() => {
-  //   console.log(searchedMovies.length, 'aqui');
-  // }, [searchedMovies]);
-
-  // useEffect(() => {
-  //   console.log(movies.length, 'aqui22');
-  // }, [movies]);
-
   useEffect(() => {
     console.log(searchValue);
     if (searchValue) {

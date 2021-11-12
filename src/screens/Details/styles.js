@@ -13,21 +13,18 @@ export const BoxCard = styled.TouchableOpacity`
   margin-left: 20px;
 `;
 
-export const ContentImage = styled.View`
-  width: 100%;
-  height: 220px;
-  border-radius: 5px;
-  overflow: hidden;
+export const TextTitle = styled.Text`
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
-export const BoxTitle = styled.View`
-  border-radius: 5px;
-  padding: 5px;
-  padding-left: 0px;
-  padding-horizontal: 6px;
-  height: 30px;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
+export const TextSinopse = styled.Text`
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  line-height: 20px;
+  text-align: justify;
 `;
 export const Title = styled.Text`
   color: white;
