@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import YouTube from 'react-native-youtube';
+import YoutubePlayer from 'react-native-youtube-iframe';
+
 import Modal from 'react-native-modal';
 
 const ModalTrailer = ({isOpen, setIsOpen, videoId}) => {
@@ -27,12 +28,7 @@ const ModalTrailer = ({isOpen, setIsOpen, videoId}) => {
             Fechar
           </Text>
         </TouchableOpacity>
-        <YouTube
-          videoId={videoId}
-          play
-          fullscreen={true}
-          style={{alignSelf: 'auto', height: 300}}
-        />
+        <YoutubePlayer height={300} play videoId={videoId} />
       </View>
     </Modal>
   );
