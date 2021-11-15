@@ -8,7 +8,7 @@ export const TextTitle = styled.Text`
   font-weight: bold;
 `;
 export const TextSinopse = styled.Text`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: white;
   line-height: 20px;

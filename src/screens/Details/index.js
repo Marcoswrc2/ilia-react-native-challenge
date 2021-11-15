@@ -94,19 +94,20 @@ function DetailsScreen({navigation, route}) {
                   uri: `${IMAGE_BASE_URL}${IMAGE_SIZE}${movieDetails?.poster_path}`,
                 }}
               />
-              <TouchableOpacity
+              <View
                 style={{
                   position: 'absolute',
                   bottom: 10,
                   marginLeft: 20,
-                }}
-                onPress={() => setOpen(true)}>
+                }}>
                 <TextTitle numberOfLines={1}>{movieDetails?.title}</TextTitle>
-              </TouchableOpacity>
+              </View>
             </View>
             <View>{renderGenres(movieDetails.genres)}</View>
             <View style={{padding: 15}}>
-              <TextSinopse style={{}}>{movieDetails?.overview}</TextSinopse>
+              <TextSinopse style={{}}>
+                {movieDetails?.overview || 'Não há sinopse deste filme.'}
+              </TextSinopse>
             </View>
             <ModalTrailer
               isOpen={open}

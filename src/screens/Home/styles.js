@@ -12,3 +12,9 @@ export const BoxFooter = styled.View`
   height: 60px;
   justify-content: center;
 `;
+
+export const ContainerEmpty = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;

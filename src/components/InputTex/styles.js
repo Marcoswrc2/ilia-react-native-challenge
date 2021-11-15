@@ -10,14 +10,14 @@ export const BoxIcon = styled.View`
 export const ContainerInput = styled.View`
   height: 40px;
   border-radius: 5px;
-  margin-right: 16px;
   border-color: #fff;
   border-width: 1px;
   padding-horizontal: 10px;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 85%;
   margin-vertical: 15px;
+  align-self: center;
 `;
 export const Label = styled.Text`
   color: ${colors.secondaryColor};

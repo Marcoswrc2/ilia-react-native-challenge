@@ -6,11 +6,8 @@ export const BoxCard = styled.TouchableOpacity`
   justify-content: flex-start;
   align-items: center;
   margin: 10px 10px;
-  margin-left: 0px;
   overflow: hidden;
   border-radius: 5px;
-  border-width: 1px;
-  margin-left: 20px;
 `;
 
 export const ContentImage = styled.View`
