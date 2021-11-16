@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {Image} from 'react-native';
 import {BoxCard, Title, ContentImage, BoxTitle} from './styles';
 import {IMAGE_BASE_URL, IMAGE_SIZE} from '../../services/api';
 
